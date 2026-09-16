@@ -48,3 +48,31 @@
 --     column_width = 0.97,
 --   },
 -- })
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#general
+hl.config({
+  general = {
+    -- No gaps between windows or borders.
+    gaps_in = 0,
+    gaps_out = 0,
+    border_size = 1,
+
+    -- Snorlax-grön färg. Notera syntaxen med ["..."] på grund av punkten i namnet
+    ["col.active_border"] = "rgb(3b7a72)",
+    ["col.inactive_border"] = "rgb(303030)",
+
+  },
+
+  decoration = {
+    -- Gör inaktiva fönster mörkare så du slipper förlita dig helt på borders
+    dim_inactive = true,
+    dim_strength = 0.05,
+  },
+})
+
+
+
+
+
+
+
