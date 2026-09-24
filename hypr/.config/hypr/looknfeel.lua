@@ -55,7 +55,7 @@ hl.config({
     -- No gaps between windows or borders.
     gaps_in = 0,
     gaps_out = 0,
-    border_size = 1,
+    border_size = 2,
 
     -- Snorlax-grön färg. Notera syntaxen med ["..."] på grund av punkten i namnet
     ["col.active_border"] = "rgb(3b7a72)",
@@ -64,9 +64,13 @@ hl.config({
   },
 
   decoration = {
-    -- Gör inaktiva fönster mörkare så du slipper förlita dig helt på borders
-    dim_inactive = true,
-    dim_strength = 0.05,
+    -- 1.0 = completely solid/opaque (no see-through)
+    -- 0.9 - 0.95 = slightly translucent
+    active_opacity = 1.1,
+    inactive_opacity = 1.10,
+
+    -- If fullscreen windows should also stay solid
+    fullscreen_opacity = 1.0,
   },
 })
 
